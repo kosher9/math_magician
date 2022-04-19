@@ -1,0 +1,13 @@
+.Calculator-Row {
+  height: 2.5rem;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.Calculator-Row:nth-child(1) {
+  grid-template-columns: 100%;
+}
+
+.Calculator-Row:nth-child(6) {
+  grid-template-columns: 50% 25% 25%;
+}

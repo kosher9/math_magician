@@ -1,0 +1,10 @@
+.Output-Ctn {
+  display: flex;
+  justify-content: end;
+  padding-right: 1rem;
+}
+
+.Output-Ctn span {
+  align-self: center;
+  color: #fff;
+}
