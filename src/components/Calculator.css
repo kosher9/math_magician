@@ -4,10 +4,38 @@
   grid-template-columns: 25% 25% 25% 25%;
 }
 
+.num-op{
+  background-color: rgb(223, 223, 223);
+}
+
 .Calculator-Row:nth-child(1) {
   grid-template-columns: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .Calculator-Row:nth-child(6) {
   grid-template-columns: 50% 25% 25%;
+}
+
+.output {
+  color: white;
+  width: fit-content;
+  height: fit-content;
+  margin-right: 0.5rem;
+  align-self: center;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  border: 0.05rem solid rgb(212, 212, 212);
+}
+
+.btn > span {
+  align-self: center;
+}
+
+.orange {
+  background-color: orange;
 }
