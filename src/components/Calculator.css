@@ -1,10 +1,11 @@
 .Calculator-Row {
-  height: 2.5rem;
+  width: 100%;
+  height: calc(100vh - 520px);
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
 }
 
-.num-op{
+.num-op {
   background-color: rgb(223, 223, 223);
 }
 
@@ -21,7 +22,6 @@
 .output {
   color: white;
   width: fit-content;
-  height: fit-content;
   margin-right: 0.5rem;
   align-self: center;
 }
