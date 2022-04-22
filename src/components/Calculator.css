@@ -32,6 +32,10 @@
   border: 0.05rem solid rgb(212, 212, 212);
 }
 
+.btn:hover {
+  cursor: pointer;
+}
+
 .btn > span {
   align-self: center;
 }

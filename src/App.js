@@ -6,11 +6,11 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.handleButtonClick = this.handleButtonClick.bind(this);
-    this.handleClear = this.handleClear.bind(this);
     this.state = { text: '0' };
   }
 
   handleButtonClick({ x, y }) {
+    const { text } = this.state;
     if (x === 'clear') {
       this.setState({ text: y });
       return;
@@ -19,27 +19,23 @@ class App extends React.Component {
       this.setState({ text: y });
       return;
     }
-    if (this.state.text === '0' && y === '0') {
+    if (text === '0' && y === '0') {
       this.setState({ text: y });
-    } else if (y !== '0' && this.state.text === '0') {
+    } else if (y !== '0' && text === '0') {
       this.setState({ text: y });
     } else {
-      this.setState({ text: this.state.text + y });
+      this.setState({ text: text + y });
     }
   }
 
-  handleClear() {
-    this.setState({ text: '' });
-  }
-
   render() {
+    const { text } = this.state;
     return (
       <div className="App">
         <div className="App-Ctn">
           <Calculator
-            output={this.state.text}
+            output={text}
             handleButtonClick={this.handleButtonClick}
-            handleClear={this.handleClear}
           />
         </div>
       </div>
