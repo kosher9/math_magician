@@ -26,7 +26,11 @@ class Calculator extends React.Component {
     this.setState({ total, next, operation });
 
     const { handleButtonClick } = this.props;
-    if (total !== null && next === null && operation === null) {
+    if (total === null && next === null && operation === null) {
+      const x = 'clear';
+      const y = 0;
+      handleButtonClick({ x, y });
+    } else if (total !== null && next === null && operation === null) {
       const x = 'clear';
       const y = total;
       handleButtonClick({ x, y });
@@ -55,7 +59,7 @@ class Calculator extends React.Component {
               tabIndex={0}
               className="btn"
               onClick={this.handleButtonClick}
-              onKeyDown={this.handleClick}
+              onKeyDown={this.handleButtonClick}
             >
               <span>AC</span>
             </div>
@@ -64,7 +68,7 @@ class Calculator extends React.Component {
               tabIndex={0}
               className="btn"
               onClick={this.handleButtonClick}
-              onKeyDown={this.handleClick}
+              onKeyDown={this.handleButtonClick}
             >
               <span>+/-</span>
             </div>
@@ -73,7 +77,7 @@ class Calculator extends React.Component {
               tabIndex={0}
               className="btn"
               onClick={this.handleButtonClick}
-              onKeyDown={this.handleClick}
+              onKeyDown={this.handleButtonClick}
             >
               <span>%</span>
             </div>
@@ -82,7 +86,7 @@ class Calculator extends React.Component {
               tabIndex={0}
               className="btn orange"
               onClick={this.handleButtonClick}
-              onKeyDown={this.handleClick}
+              onKeyDown={this.handleButtonClick}
             >
               <span>÷</span>
             </div>
@@ -93,7 +97,7 @@ class Calculator extends React.Component {
               tabIndex={0}
               className="btn"
               onClick={this.handleButtonClick}
-              onKeyDown={this.handleClick}
+              onKeyDown={this.handleButtonClick}
             >
               <span>7</span>
             </div>
@@ -102,7 +106,7 @@ class Calculator extends React.Component {
               tabIndex={0}
               className="btn"
               onClick={this.handleButtonClick}
-              onKeyDown={this.handleClick}
+              onKeyDown={this.handleButtonClick}
             >
               <span>8</span>
             </div>
@@ -111,7 +115,7 @@ class Calculator extends React.Component {
               tabIndex={0}
               className="btn"
               onClick={this.handleButtonClick}
-              onKeyDown={this.handleClick}
+              onKeyDown={this.handleButtonClick}
             >
               <span>9</span>
             </div>
@@ -120,7 +124,7 @@ class Calculator extends React.Component {
               tabIndex={0}
               className="btn orange"
               onClick={this.handleButtonClick}
-              onKeyDown={this.handleClick}
+              onKeyDown={this.handleButtonClick}
             >
               <span>x</span>
             </div>
@@ -131,7 +135,7 @@ class Calculator extends React.Component {
               tabIndex={0}
               className="btn"
               onClick={this.handleButtonClick}
-              onKeyDown={this.handleClick}
+              onKeyDown={this.handleButtonClick}
             >
               <span>4</span>
             </div>
@@ -140,7 +144,7 @@ class Calculator extends React.Component {
               tabIndex={0}
               className="btn"
               onClick={this.handleButtonClick}
-              onKeyDown={this.handleClick}
+              onKeyDown={this.handleButtonClick}
             >
               <span>5</span>
             </div>
@@ -149,7 +153,7 @@ class Calculator extends React.Component {
               tabIndex={0}
               className="btn"
               onClick={this.handleButtonClick}
-              onKeyDown={this.handleClick}
+              onKeyDown={this.handleButtonClick}
             >
               <span>6</span>
             </div>
@@ -158,7 +162,7 @@ class Calculator extends React.Component {
               tabIndex={0}
               className="btn orange"
               onClick={this.handleButtonClick}
-              onKeyDown={this.handleClick}
+              onKeyDown={this.handleButtonClick}
             >
               <span>-</span>
             </div>
@@ -169,7 +173,7 @@ class Calculator extends React.Component {
               tabIndex={0}
               className="btn"
               onClick={this.handleButtonClick}
-              onKeyDown={this.handleClick}
+              onKeyDown={this.handleButtonClick}
             >
               <span>1</span>
             </div>
@@ -178,7 +182,7 @@ class Calculator extends React.Component {
               tabIndex={0}
               className="btn"
               onClick={this.handleButtonClick}
-              onKeyDown={this.handleClick}
+              onKeyDown={this.handleButtonClick}
             >
               <span>2</span>
             </div>
@@ -187,7 +191,7 @@ class Calculator extends React.Component {
               tabIndex={0}
               className="btn"
               onClick={this.handleButtonClick}
-              onKeyDown={this.handleClick}
+              onKeyDown={this.handleButtonClick}
             >
               <span>3</span>
             </div>
@@ -196,7 +200,7 @@ class Calculator extends React.Component {
               tabIndex={0}
               className="btn orange"
               onClick={this.handleButtonClick}
-              onKeyDown={this.handleClick}
+              onKeyDown={this.handleButtonClick}
             >
               <span>+</span>
             </div>
@@ -207,7 +211,7 @@ class Calculator extends React.Component {
               tabIndex={0}
               className="btn"
               onClick={this.handleButtonClick}
-              onKeyDown={this.handleClick}
+              onKeyDown={this.handleButtonClick}
             >
               <span>0</span>
             </div>
@@ -216,7 +220,7 @@ class Calculator extends React.Component {
               tabIndex={0}
               className="btn"
               onClick={this.handleButtonClick}
-              onKeyDown={this.handleClick}
+              onKeyDown={this.handleButtonClick}
             >
               <span>.</span>
             </div>
@@ -226,7 +230,7 @@ class Calculator extends React.Component {
               tabIndex={0}
               className="btn orange"
               onClick={this.handleButtonClick}
-              onKeyDown={this.handleClick}
+              onKeyDown={this.handleButtonClick}
             >
               <span>=</span>
             </div>
