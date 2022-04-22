@@ -12,6 +12,10 @@ class Calculator extends React.Component {
     this.props.handleButtonClick(e.target.innerText)
   }
 
+  handleOperation(e){
+    this.props.handleOperation(e.target.innerText)
+  }
+
   render() {
     return (
       <div className="Calculator">
@@ -46,7 +50,7 @@ class Calculator extends React.Component {
           <div className="Calculator-Row num-op">
             <div className="btn" onClick={this.handleButtonClick}><span>0</span></div>
             <div className="btn" onClick={this.handleButtonClick}><span>.</span></div>
-            <div className="btn orange" onClick={this.handleButtonClick}><span>=</span></div>
+            <div className="btn orange" onClick={this.handleOperation}><span>=</span></div>
           </div>
         </div>
       </div>
