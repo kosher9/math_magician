@@ -1,15 +1,38 @@
 import React from 'react';
+import calculate from '../logic/calculate';
 import './Calculator.css';
 
 class Calculator extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      total: null,
+      next: null,
+      operation: null,
+    };
     this.handleButtonClick = this.handleButtonClick.bind(this)
+    this.handleClear = this.handleClear.bind(this)
   }
 
   handleButtonClick(e) {
-    this.props.handleButtonClick(e.target.innerText)
+    this.props.handleButtonClick({x: '', y: e.target.innerText})
+    let data = {
+      total: this.state.total,
+      next: this.state.next,
+      operation: this.state.operation,
+    }
+    const {total, next, operation} = calculate(data, e.target.innerText)
+    this.setState({total: total, next: next, operation: operation})
+    
+    if(total !== null && next === null && operation === null) {
+      this.props.handleButtonClick({x: 'clear', y: total})
+    } else if (total === null && next !== null && operation === undefined) {
+      this.props.handleButtonClick({x: 'old', y: next})
+    }
+  }
+
+  handleClear() {
+    this.props.handleButtonClick('clear')
   }
 
   handleOperation(e){
@@ -50,7 +73,7 @@ class Calculator extends React.Component {
           <div className="Calculator-Row num-op">
             <div className="btn" onClick={this.handleButtonClick}><span>0</span></div>
             <div className="btn" onClick={this.handleButtonClick}><span>.</span></div>
-            <div className="btn orange" onClick={this.handleOperation}><span>=</span></div>
+            <div className="btn orange" onClick={this.handleButtonClick} ><span>=</span></div>
           </div>
         </div>
       </div>
