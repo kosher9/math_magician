@@ -28,7 +28,7 @@ class Calculator extends React.Component {
     const { handleButtonClick } = this.props;
     if (total === null && next === null && operation === null) {
       const x = 'clear';
-      const y = 0;
+      const y = '0';
       handleButtonClick({ x, y });
     } else if (total !== null && next === null && operation === null) {
       const x = 'clear';
