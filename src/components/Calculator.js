@@ -222,20 +222,4 @@ function Calculator() {
   );
 }
 
-/* Calculator.defaultProps = {
-  output: '0',
-  handleButtonClick: {
-    x: '',
-    y: '',
-  },
-}; */
-
-/* Calculator.propTypes = {
-  output: PropTypes.string,
-  handleButtonClick: {
-    x: PropTypes.string,
-    y: PropTypes.string,
-  }.PropTypes,
-}; */
-
 export default Calculator;
