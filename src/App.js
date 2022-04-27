@@ -5,16 +5,13 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <h1>Bla</h1>
-      <nav>
+      <h1>Math Magician</h1>
+      <nav style={{ padding: '1rem 0' }}>
         <Link to="/home">Home</Link>
         <Link to="/calculator">Calculator</Link>
         <Link to="/quotes">Quotes</Link>
       </nav>
       <Outlet />
-      <div className="App-Ctn">
-        {/* <Calculator /> */}
-      </div>
     </div>
   );
 }
