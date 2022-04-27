@@ -31,8 +31,11 @@ export default function Calculator() {
 
   return (
     <div className="Calculator">
+      <div className="container-home">
+        <h1>Let&lsquo;s do some math !</h1>
+      </div>
       <div className="Calculator-Ctn">
-        <div className="Calculator-Row">
+        <div className="Calculator-Row row-output">
           <span className="output">{output}</span>
         </div>
         <div className="Calculator-Row num-op">

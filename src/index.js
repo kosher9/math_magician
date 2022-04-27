@@ -8,6 +8,7 @@ import Calculator from './components/Calculator';
 import Quotes from './components/Quotes';
 import reportWebVitals from './reportWebVitals';
 
+document.body.style = 'background-color: #131313;';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
