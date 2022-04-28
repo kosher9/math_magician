@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import calculate from '../logic/calculate';
 import './Calculator.css';
 
-function Calculator() {
+export default function Calculator() {
   const [data, setData] = useState({
     total: null,
     next: null,
@@ -31,8 +31,11 @@ function Calculator() {
 
   return (
     <div className="Calculator">
+      <div className="container-home">
+        <h1>Let&lsquo;s do some math !</h1>
+      </div>
       <div className="Calculator-Ctn">
-        <div className="Calculator-Row">
+        <div className="Calculator-Row row-output">
           <span className="output">{output}</span>
         </div>
         <div className="Calculator-Row num-op">
@@ -221,5 +224,3 @@ function Calculator() {
     </div>
   );
 }
-
-export default Calculator;

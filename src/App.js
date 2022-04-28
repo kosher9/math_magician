@@ -1,13 +1,19 @@
 import React from 'react';
-import Calculator from './components/Calculator';
+import { Link, Outlet } from 'react-router-dom';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <div className="App-Ctn">
-        <Calculator />
-      </div>
+      <header>
+        <h1>Math Magician</h1>
+        <nav>
+          <Link to="/home">Home</Link>
+          <Link to="/calculator">Calculator</Link>
+          <Link to="/quotes">Quotes</Link>
+        </nav>
+      </header>
+      <Outlet />
     </div>
   );
 }
