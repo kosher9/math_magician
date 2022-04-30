@@ -9,8 +9,8 @@
 
 ## Live Demo
 
-![live demo 1](https://kosher9-math-magician.herokuapp.com/)
-![live demo 2](https://kosher9-math-magician.netlify.app/)
+[live demo 1](https://kosher9-math-magician.herokuapp.com/)
+[live demo 2](https://kosher9-math-magician.netlify.app/)
 
 ## Getting Started
 
