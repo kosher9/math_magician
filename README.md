@@ -1,4 +1,4 @@
-# Todo App
+# Math Magician
 
 ![Microverse](https://img.shields.io/badge/Microverse-blueviolet)
 
