@@ -8,7 +8,7 @@ function App() {
       <header>
         <h1>Math Magician</h1>
         <nav>
-          <Link to="/home">Home</Link>
+          <Link to="/">Home</Link>
           <Link to="/calculator">Calculator</Link>
           <Link to="/quotes">Quotes</Link>
         </nav>
